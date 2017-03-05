@@ -1,0 +1,111 @@
+extends layouts/layout.jade
+
+block vars
+ - var title = 'タイトル'
+ - var slug = 'top'
+
+
+block contents
+  header
+    .row
+      .columns
+        p.text-supported.show-for-small-only
+          | lead small
+        p.text-supported.show-for-medium-up
+          | lead medium
+          i.fa.fa-facebook-official.fa-3x
+
+        h1
+          | site name
+        h2
+          | Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+
+  main
+    section#about.content-box
+      .row
+        .columns.small-6.medium-4
+          h1
+            | Copy
+          p.about-lead
+            | Lorem ipsum dolor sit amet,
+            br
+            | consectetur adipisicing elit,
+            br
+            | sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            br
+            | Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+            br
+            | Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+        .columns.small-6.medium-8
+          img(src="http://placehold.it/400x300", alt="")
+
+
+      .row
+        ul.small-block-grid-2.medium-block-grid-3
+          li
+            img(src="http://placehold.it/400x300", alt="")
+          li
+            img(src="http://placehold.it/400x300", alt="")
+          li
+            img(src="http://placehold.it/400x300", alt="")
+          li
+            img(src="http://placehold.it/400x300", alt="")
+          li
+            img(src="http://placehold.it/400x300", alt="")
+          li
+            img(src="http://placehold.it/400x300", alt="")
+          li
+            img(src="http://placehold.it/400x300", alt="")
+          li
+            img(src="http://placehold.it/400x300", alt="")
+
+    section#vision.content-box.inverse
+      .row
+        .columns.medium-8.small-centered
+          .movie-box
+            iframe(height="321", src="https://www.youtube.com/embed/m4-8JCEiQGY" frameborder="0" allowfullscreen)
+
+    section#news.content-box
+      .row
+        .columns
+          h1 News
+          dl.list-date
+            each val in topics.slice(0,3)
+              dt=val.date
+              if val.url != ""
+                dd
+                  a(href="#{val.url}")=val.text
+              else
+                dd=val.text
+
+    section#company.content-box.inverse
+      .row
+        .columns
+          h1
+            | Supporters
+        .columns.medium-6.small-12
+          h2
+            | Company
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p
+            a(href="#", target="_blank")
+              i.fa.fa-external-link
+              | Link
+        .columns.medium-6.small-6
+          h2
+            | Company
+          p
+            | Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+          p
+            a(href="#", target="_blank")
+              i.fa.fa-external-link
+              | Link
+
+    footer
+      .row
+        .columns
+          p.text-center
+            small
+              | &copy; 2016 Life is Tech, Inc

@@ -1,0 +1,36 @@
+mixin meta(title, slug, ogpTitle, ogpDescription, ogpImage, ogpUrl)
+  meta(charset="utf-8")
+  title= title + " "
+
+  meta(property="og:locale" content="ja_JP")
+  meta(property="og:type" content="website")
+
+  meta(property="og:url" content=ogpUrl ? ogpUrl : "https://life-is-tech.com/t4t-twitter")
+  meta(name="twitter:url" value=ogpUrl ? ogpUrl : "https://life-is-tech.com/t4t-twitter")
+  meta(property="og:title" content=ogpTitle ? ogpTitle : title)
+  meta(name="twitter:title" value=ogpTitle ? ogpTitle : title)
+  meta(property="og:image" content=ogpImage ? ogpImage : 'https://life-is-tech.com/t4t-twitter/images/ogp.jpg')
+  meta(name="twitter:image" value=ogpImage ? ogpImage : 'https://life-is-tech.com/t4t-twitter/images/ogp.jpg')
+  meta(property="og:description" content=ogpDescription ? ogpDescription : '国内最大級の中高生向けプログラミング教育プログラム「Life is Tech !」を運営するライフイズテック株式会社の公式企業ページです。')
+  meta(name="twitter:description" value=ogpDescription ? ogpDescription : '国内最大級の中高生向けプログラミング教育プログラム「Life is Tech !」を運営するライフイズテック株式会社の公式企業ページです。')
+
+  meta(property="og:site_name" content="ライフイズテック株式会社")
+  meta(propaty="fb:admin_id" content="100001515684175")
+
+  meta(name="twitter:card" value="summary_large_image")
+  meta(name="twitter:site" value="@LifeisTechInc")
+  meta(name="twitter:creator" value="@LifeisTechInc")
+
+  meta(name='viewport' content='width=device-width, initial-scale=1, user-scalable=yes')
+
+  link(rel="stylesheet" href="app.css")
+  //- link(rel="shortcut icon" href="/favicon.ico")
+
+
+
+  noscript
+    iframe src="//www.googletagmanager.com/ns.html?id=GTM-KL9KBC" height="0" width="0" style="display:none;visibility:hidden"
+  script.
+    (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KL9KBC');
